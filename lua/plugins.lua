@@ -56,6 +56,13 @@ return require("packer").startup(function(use)
     end,
   })
 
+  use({
+    "evanleck/vim-svelte",
+    config = function()
+      require("configs.vim-svelte")
+    end,
+  })  
+
   use("onsails/lspkind-nvim")
   use({
     "L3MON4D3/LuaSnip",
