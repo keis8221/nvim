@@ -18,8 +18,6 @@ return require("packer").startup(function(use)
   -- Colorschema
   use("EdenEast/nightfox.nvim")
 
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
-
   use({
     "neanias/everforest-nvim",
     -- Optional; default configuration will be used if setup isn't called.
@@ -67,19 +65,12 @@ return require("packer").startup(function(use)
   })
 
   -- LSP Saga 
---  use({
---      "glepnir/lspsaga.nvim",
---      opt = true,
---      branch = "main",
---      event = "LspAttach",
---      config = function()
---          require("lspsaga").setup({})
---      end,
---      requires = {
---          {"nvim-tree/nvim-web-devicons"},
---          --Please make sure you install markdown and markdown_inline parser
---          {"nvim-treesitter/nvim-treesitter"}
---      }
+--  use ({
+--    'nvimdev/lspsaga.nvim',
+--    after = 'nvim-lspconfig',
+--    config = function()
+--        require('lspsaga').setup({})
+--    end,
 --  })
 
   -- vim-svelte
@@ -205,4 +196,19 @@ return require("packer").startup(function(use)
       })
     end,
   })
+
+  use('romgrk/barbar.nvim')
+
+  use('rebelot/kanagawa.nvim')
+
+  use({
+    "j-hui/fidget.nvim",
+    config = function()
+    require("fidget").setup {
+    -- options
+    }
+    end,
+  })
+
+  use('pechorin/any-jump.vim')
 end)
