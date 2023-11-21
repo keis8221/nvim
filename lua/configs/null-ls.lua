@@ -11,8 +11,8 @@ local dgn = nls.builtins.diagnostics
 local cda = nls.builtins.code_actions
 
 nls.setup({
+    diagnostics_format = "#{m} (#{s}: #{c})",
     sources = {
-
         -- Formatting
         fmt.prettierd,
         fmt.eslint_d,
@@ -21,6 +21,10 @@ nls.setup({
         }),
         fmt.stylua,
         fmt.rustfmt,
+        -- Go Formatting
+        fmt.gofumpt,
+        fmt.goimports_reviser,
+        fmt.golines,
 
         -- Diagnostics
         dgn.eslint_d,
