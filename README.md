@@ -22,7 +22,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 5. open neovim and exec ``` :PackerInstall ```
 
 ## Others
-- Install ripgrep to enable telescope full-text search
+- Install others
 ```
+brew install lazygit
 brew install ripgrep
 ```
